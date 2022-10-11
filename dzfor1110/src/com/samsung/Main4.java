@@ -1,5 +1,6 @@
 package com.samsung;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main4 {
@@ -13,11 +14,11 @@ public class Main4 {
         }
         if(A>0) {
             if(B>0)  System.out.println("any x");
-            else System.out.println("x<" + B/A + " or x>"+ (-1)*(B/A));
+            else System.out.println("x<" + String.format(Locale.US, "%.1f",B/A) + " or x>"+ String.format(Locale.US, "%.1f",(-1)*(B/A)));
         }
         if(A<0) {
             if(B<0) System.out.println("no such x");
-            else System.out.println(B/A + "<x<" + (-1)*(B/A));
+            else System.out.println(String.format(Locale.US, "%.1f",B/A)+ "<x<" + String.format(Locale.US, "%.1f",(-1)*(B/A)));
         }
 
     }
